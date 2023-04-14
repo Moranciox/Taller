@@ -1,132 +1,280 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="h-25" data-bs-theme="dark">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
-        <title>Reserva de pasajes</title>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Reservas de Pasajes</title>
         <link rel="stylesheet" href="estilito.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
-    <body>
+    
+    <body class="d-flex flex-column h-25">
         <header>
-            <nav>
-                <ul id="menu-principal">
-                    <li><a href="#Inicio">Inicio</a></li>
-                    <li><a href="#Recorridos">Recorridos</a></li>
-                    <li><a href="#Reserva">Reserva</a></li>
-                    <li><a href="#Nosotros">Nosotros</a></li>
-                    <li><a href="#Alcance">Alcance</a></li>
-                </ul>
-            </nav>
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-md fixed-top navbar-dark justify-content-center" style="background-color: #90de09;">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                            <span class="navbar-toggler-icon">
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="menu">
+                            <a class="navbar-brand nav-link" href="#Inicio"><img src="cat.gif" width="30px" height="30px"></a>
+                            <ul class="navbar-nav w-100 justify-content-between">
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Inicio">Inicio</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Recorridos">Recorridos</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Reserva">Reserva</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Nosotros">Nosotros</a></li>
+                                <li id="lista" class="nav-item"><a id="cont_lista" class="nav-link" href="#Alcance">Alcance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </header>
-        <section id="Inicio" class="container">
-            <div id="titulito">
-                <h1>Reserva de pasajes</h1>
-            </div>
-        </section>
-        <section style="height: 1000px"; id="Recorridos" class="container">
-            <div>
-                <p>aqui va los Recorridos</p><br>
-                <table>
-                    <tr>
-                        <th>Origen</th>
-                        <th>Destino</th>
-                        <th>Hora de salida</th>
-                        <th>Tiempo estimado</th>
-                    </tr>
-                    <tr>
-                        <td>Curico</td>
-                        <td>Talca</td>
-                        <td>10:30</td>
-                        <td>1 hora</td>
-                    </tr>
-                    <tr>
-                        <td>Talca</td>
-                        <td>Curico</td>
-                        <td>7:30</td>
-                        <td>1 hora</td>
-                    </tr>
+        <main style="padding: 60px;">
+            <section id="Inicio" class="container-fluid" style="padding: 60px;">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="https://www.diarioconstitucional.cl/wp-content/uploads/2020/08/31716.jpg" class="d-block w-100" alt="..." height="870px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>First slide label</h5>
+                                <p id="pecita">Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="https://www.lavozdelnorte.cl/wp-content/uploads/2020/04/buses-chile-768x530.jpg" class="d-block w-100" alt="..." height="870px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Second slide label</h5>
+                                <p id="pecita">Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://www.elinformador.cl/wp-content/uploads/2019/01/Scania-Interurbano-1_sss1portal-696x464.jpg" class="d-block w-100" alt="..." height="870px">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Third slide label</h5>
+                                <p id="pecita">Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            <section  id="Recorridos" class="container" style="padding-top: 150px;">
+                <table class="table">
+                    <thead class="table-secondary">
+                        <tr>
+                            <th>Origen</th>
+                            <th>Destino</th>
+                            <th>Hora de salida</th>
+                            <th>Tiempo estimado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Curico</td>
+                            <td>Talca</td>
+                            <td>10:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Talca</td>
+                            <td>Curico</td>
+                            <td>7:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Curico</td>
+                            <td>Talca</td>
+                            <td>10:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Talca</td>
+                            <td>Curico</td>
+                            <td>7:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Curico</td>
+                            <td>Talca</td>
+                            <td>10:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Talca</td>
+                            <td>Curico</td>
+                            <td>7:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Talca</td>
+                            <td>Curico</td>
+                            <td>7:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Curico</td>
+                            <td>Talca</td>
+                            <td>10:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Talca</td>
+                            <td>Curico</td>
+                            <td>7:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Curico</td>
+                            <td>Talca</td>
+                            <td>10:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                        <tr>
+                            <td>Talca</td>
+                            <td>Curico</td>
+                            <td>7:30</td>
+                            <td>1 hora</td>
+                        </tr>
+                    </tbody>
                 </table>
-            </div>
-            <a href="#">Volver arriba</a>
-        </section>
-        <section style="height: 1000px"; id="Reserva" class="container">
-            <div class="form-reserva">
-                <h4>Formulario Reserva</h4>
-                <form>
-                    <label class="texto" for="ciudad">Elije tu ciudad de Origen: </label>
-                        <select name="ciudad">
-                            <option value="01">Talca</option>
-                            <option value="02">Curico</option>
-                            <option value="03">Linares</option>
-                            <option value="04">Cauquenes</option>
-                        </select><br><br>
-                        <label class="texto" for="ciudad">Elije tu ciudad de Destino: </label>
-                        <select name="ciudad">
-                            <option value="01">Talca</option>
-                            <option value="02">Curico</option>
-                            <option value="03">Linares</option>
-                            <option value="04">Cauquenes</option>
-                        </select><br><br>
-                        <label class="texto" for="hora">Hora de salida: </label>
-                            <select name="salida">
-                                <option value="01">7:30</option>
-                                <option value="01">8:30</option>
-                                <option value="01">9:30</option>
-                                <option value="01">10:30</option>
+            </section>
+
+            <section id="Reserva" class="container" style="padding-top: 60px;">
+                
+                
+                <div class="form-reserva">
+                    <h4>Formulario Reserva</h4>
+                    <form>
+                        <label class="texto" for="ciudad">Elije tu ciudad de Origen: </label>
+                            <select name="ciudad" style="justify-content: left;">
+                                <option value="01">Talca</option>
+                                <option value="02">Curico</option>
+                                <option value="03">Linares</option>
+                                <option value="04">Cauquenes</option>
                             </select><br><br>
-                        <label class="texto" for="fecha">Dia de salida: </label>
-                        <input class="controles" type="date" id="fecha" name="fecha" >
-                        <label class="texto" for="nombre">Nombre: </label>
-                        <input class="controles" type="text" id="nombre" name="nombre" placeholder="Inserta tu nombre aqui...">
-                        <label class="texto" for="apellido1">Apellido1: </label>
-                        <input class="controles" type="text" id="apellido1" name="apellido1" placeholder="Inserta tu apellido1 aqui...">
-                        <label class="texto" for="apellido2">Apellido2: </label>
-                        <input class="controles" type="text" id="apellido2" name="apellido2" placeholder="Inserta tu apellido2 aqui...">
-                        <label class="texto" for="email">Corrreo electronico: </label>
-                        <input class="controles" type="email" id="email" name="email" placeholder="Inserta tu correo aqui...">
-                        <input class="boton" type="submit" value="Enviar">
-                </form>
+                            <label class="texto" for="ciudad">Elije tu ciudad de Destino: </label>
+                            <select name="ciudad">
+                                <option value="01">Talca</option>
+                                <option value="02">Curico</option>
+                                <option value="03">Linares</option>
+                                <option value="04">Cauquenes</option>
+                            </select><br><br>
+                            <label class="texto" for="hora">Hora de salida: </label>
+                                <select name="salida">
+                                    <option value="01">7:30</option>
+                                    <option value="01">8:30</option>
+                                    <option value="01">9:30</option>
+                                    <option value="01">10:30</option>
+                                </select><br><br>
+                            <label class="texto" for="fecha">Dia de salida: </label>
+                            <input class="controles" type="date" id="fecha" name="fecha" >
+                            <label class="texto" for="nombre">Nombre: </label>
+                            <input class="controles" type="text" id="nombre" name="nombre" placeholder="Inserta tu nombre aqui...">
+                            <label class="texto" for="apellido1">Apellido1: </label>
+                            <input class="controles" type="text" id="apellido1" name="apellido1" placeholder="Inserta tu apellido1 aqui...">
+                            <label class="texto" for="apellido2">Apellido2: </label>
+                            <input class="controles" type="text" id="apellido2" name="apellido2" placeholder="Inserta tu apellido2 aqui...">
+                            <label class="texto" for="email">Corrreo electronico: </label>
+                            <input class="controles" type="email" id="email" name="email" placeholder="Inserta tu correo aqui...">
+                            <input class="btn btn-primary" type="submit"  value="Enviar">
+                    </form>
+                </div>
+            </section>
+
+            <section id="Nosotros" class="container">
+                <div class="container-fluid" style="justify-content: center;">
+                    <h1 class="text-center mb-4">¿Quienes somos?</h1>
+                    
+                    <div class="row">
+                        <div class="col-auto" style="width: 400px;">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <label class="mb-1" >Julio Canales</label><br>
+                                    <img src="https://i.imgflip.com/79opm6.jpg" height="320px" width="270px" alt="Julio" ></td>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Sobre Julio</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, tristique et luctus orci nam accumsan sociis tincidunt ad, neque eget integer etiam aptent condimentum dui. Fames integer consequat urna gravida scelerisque imperdiet etiam purus, nunc elementum magnis nec eleifend egestas cum velit, non mi molestie habitasse curabitur varius enim.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto" style="width: 400px;">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <label class="mb-1">Eduardo Moran</label><br>
+                                    <img src="https://i1.sndcdn.com/artworks-KbgEG4BtLKFJcZGN-I6E0IQ-t500x500.jpg" height="320px" width="270px" alt="Morancitox">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Sobre Eduardo...</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, tristique et luctus orci nam accumsan sociis tincidunt ad, neque eget integer etiam aptent condimentum dui. Fames integer consequat urna gravida scelerisque imperdiet etiam purus, nunc elementum magnis nec eleifend egestas cum velit, non mi molestie habitasse curabitur varius enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto" style="width: 400px;">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <label class="mb-1">Jeremy Sepulveda</label><br>
+                                    <img src="https://img.ifunny.co/images/e2ab34084e303d5f55acdbd3e70160944c232f84c739c07121fbddca1fc2c0b8_1.jpg" height="320px" width="270px" alt="Jeremy">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Sobre Jeremy...</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos, tristique et luctus orci nam accumsan sociis tincidunt ad, neque eget integer etiam aptent condimentum dui. Fames integer consequat urna gravida scelerisque imperdiet etiam purus, nunc elementum magnis nec eleifend egestas cum velit, non mi molestie habitasse curabitur varius enim.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </section>
+            <section id="Alcance" class="container" style="height: 700px;">
+                
+                <div id="degradao">
+                    <h1 style="color: purple">Nuestro compromiso a llegar: </h1>
+                    <p align="center" width="10" style="font-size: x-large; color: rgb(0, 0, 0)">La idea de este proyecto, es abarcar una pagina web en la cual se pueda reservar pasajes de bus,
+                    a nivel regional como maximo, se espera tener un apartado donde se muestren dichos recorridos con sus tiempos y horas de salidas. Ademas se espera tener un sistema en el cual el usuario
+                    pueda ingresar sus datos y reservar el pasaje en si, esto se haria en el area de reservas. Por ultimo, se desea, si es que se puede, una forma en la cual los usuarios puedan ver 
+                    los asientos ocupados y desocupados dentro de la misma reserva y asi puedan escoger el asiento que les acomode.</p><br>
+                        
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer mt-auto py-3 bg-body-tertiary text-center">
+            <div class="container">
+                <p>2023 &copy; - Universidad de Talca</p>
             </div>
-            <a href="#">Volver arriba</a>
-        </section>
-        <section style="height: 1000px"; id="Nosotros" class="container">
-            <p>aqui vamos nosotros</p>
-            <div>
-                <table>
-                    <tr>
-                        <td><img src="https://i.imgflip.com/79opm6.jpg" height="350px" width="270px" alt="Julio"></td>
-                        <td><img src="https://i1.sndcdn.com/artworks-KbgEG4BtLKFJcZGN-I6E0IQ-t500x500.jpg" height="350px" width="270px" alt="Morancitox"></td>
-                        <td><img src="https://img.ifunny.co/images/e2ab34084e303d5f55acdbd3e70160944c232f84c739c07121fbddca1fc2c0b8_1.jpg" height="350px" width="270px" alt="Jeremy"></td>
-                    </tr>
-                    <tr>
-                        <th>Julio Canales</th>
-                        <th>Eduardo Moran</th>
-                        <th>Jeremy Sepulveda</th>
-                    </tr>
-                    <tr>
-                        <td>Info de junglito</td>
-                        <td>info de morancito</td>
-                        <td>info de jeremyx</td>
-                    </tr>
-                </table>
-                <a href="#">Volver arriba</a>
-            </div>
-        </section>
-        <section style="height: 1000px"; id="Alcance" class="container">
-            <p>aqui va nuestro alcance</p>
-            <div>
-                <h1>Nuestro compromiso a llegar: </h1>
-                <p align="center" width="10">Me llamo Yoshikage Kira. Tengo 33 años. Mi casa está al noroeste de Morioh, donde están las casas grandes y no estoy casado. <br> 
-                    Trabajo como empleado en el supermercado Kame Yu y llego a casa todos los días a más tardar a las 8:00 pm. No fumo y solo bebo en ocasiones. <br>
-                    Duermo a las 11:00 pm y siempre procuro dormir ocho horas. Después de beber un vaso de leche tibia y hacer unos 20 minutos de calistenia antes de ir a la cama, suelo dormir hasta la mañana.<br> 
-                    Despierto sin fatiga ni estrés, como un bebé. En mi último chequeo, me dijeron que estoy sano.</p><br>
-                    <a href="#">Volver arriba</a>
-            </div>
-        </section>
-        <footer>
-            <p>Este sitio pertenece al Morancitox</p>
-            <div>&#169 Mira tu, tengo los derechos reservados</div>
-            <a href="#">Volver arriba</a>
         </footer>
+
+
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
